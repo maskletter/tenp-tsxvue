@@ -1,0 +1,16 @@
+{
+  "name": "@tenp/tsxvue",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "maskletter",
+  "license": "ISC",
+  "homepage": "https://github.com/maskletter/tenp-tsxvue",
+  "devDependencies": {
+    "csstype": "^2.6.10"
+  }
+}
