@@ -21,13 +21,17 @@ type NativeUIEvent = UIEvent;
 type NativeWheelEvent = WheelEvent;
 type Booleanish = boolean | 'true' | 'false';
 
-declare class VueJsx<Props = {}> extends Vue {
-    constructor(props: ComponentOptions<any> & ThisType<any> & Props);
+declare class TsxVue<Props = {}> extends Vue {
+    constructor(props: ComponentOptions<any> & ThisType<any> & Props & {
+        scopedSlots?: {
+            [key: string]: (value: any) => void
+        }
+    });
 }
 
-export = VueJsx;
-export as namespace VueJsx;
-declare namespace VueJsx {
+export = TsxVue;
+export as namespace TsxVue;
+declare namespace TsxVue {
 
     class Component<Props = {}> extends Vue {
         constructor(props: ComponentOptions<any> & ThisType<any> & Props);
@@ -1407,194 +1411,194 @@ declare global {
             // render(): VNode;
         }
         // interface ElementAttributesProperty { props: {}; }
-        // interface ElementChildrenAttribute { children: {}; }
+        interface ElementChildrenAttribute { children: {}; }
 
       
 
         // tslint:disable-next-line:no-empty-interface
-        interface IntrinsicAttributes extends VueJsx.Attributes { }
+        interface IntrinsicAttributes extends TsxVue.Attributes { }
         // tslint:disable-next-line:no-empty-interface
-        interface IntrinsicClassAttributes<T> extends VueJsx.ClassAttributes<T> { }
+        interface IntrinsicClassAttributes<T> extends TsxVue.ClassAttributes<T> { }
 
         interface IntrinsicElements {
             // HTML
-            a: VueJsx.DetailedHTMLProps<VueJsx.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
-            abbr: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            address: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            area: VueJsx.DetailedHTMLProps<VueJsx.AreaHTMLAttributes<HTMLAreaElement>, HTMLAreaElement>;
-            article: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            aside: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            audio: VueJsx.DetailedHTMLProps<VueJsx.AudioHTMLAttributes<HTMLAudioElement>, HTMLAudioElement>;
-            b: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            base: VueJsx.DetailedHTMLProps<VueJsx.BaseHTMLAttributes<HTMLBaseElement>, HTMLBaseElement>;
-            bdi: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            bdo: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            big: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            blockquote: VueJsx.DetailedHTMLProps<VueJsx.BlockquoteHTMLAttributes<HTMLElement>, HTMLElement>;
-            body: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLBodyElement>, HTMLBodyElement>;
-            br: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLBRElement>, HTMLBRElement>;
-            button: VueJsx.DetailedHTMLProps<VueJsx.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
-            canvas: VueJsx.DetailedHTMLProps<VueJsx.CanvasHTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement>;
-            caption: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            cite: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            code: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            col: VueJsx.DetailedHTMLProps<VueJsx.ColHTMLAttributes<HTMLTableColElement>, HTMLTableColElement>;
-            colgroup: VueJsx.DetailedHTMLProps<VueJsx.ColgroupHTMLAttributes<HTMLTableColElement>, HTMLTableColElement>;
-            data: VueJsx.DetailedHTMLProps<VueJsx.DataHTMLAttributes<HTMLDataElement>, HTMLDataElement>;
-            datalist: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLDataListElement>, HTMLDataListElement>;
-            dd: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            del: VueJsx.DetailedHTMLProps<VueJsx.DelHTMLAttributes<HTMLElement>, HTMLElement>;
-            details: VueJsx.DetailedHTMLProps<VueJsx.DetailsHTMLAttributes<HTMLElement>, HTMLElement>;
-            dfn: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            dialog: VueJsx.DetailedHTMLProps<VueJsx.DialogHTMLAttributes<HTMLDialogElement>, HTMLDialogElement>;
-            div: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
-            dl: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLDListElement>, HTMLDListElement>;
-            dt: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            em: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            embed: VueJsx.DetailedHTMLProps<VueJsx.EmbedHTMLAttributes<HTMLEmbedElement>, HTMLEmbedElement>;
-            fieldset: VueJsx.DetailedHTMLProps<VueJsx.FieldsetHTMLAttributes<HTMLFieldSetElement>, HTMLFieldSetElement>;
-            figcaption: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            figure: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            footer: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            form: VueJsx.DetailedHTMLProps<VueJsx.FormHTMLAttributes<HTMLFormElement>, HTMLFormElement>;
-            h1: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
-            h2: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
-            h3: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
-            h4: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
-            h5: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
-            h6: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
-            head: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLHeadElement>, HTMLHeadElement>;
-            header: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            hgroup: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            hr: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLHRElement>, HTMLHRElement>;
-            html: VueJsx.DetailedHTMLProps<VueJsx.HtmlHTMLAttributes<HTMLHtmlElement>, HTMLHtmlElement>;
-            i: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            iframe: VueJsx.DetailedHTMLProps<VueJsx.IframeHTMLAttributes<HTMLIFrameElement>, HTMLIFrameElement>;
-            img: VueJsx.DetailedHTMLProps<VueJsx.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>;
-            input: VueJsx.DetailedHTMLProps<VueJsx.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
-            ins: VueJsx.DetailedHTMLProps<VueJsx.InsHTMLAttributes<HTMLModElement>, HTMLModElement>;
-            kbd: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            keygen: VueJsx.DetailedHTMLProps<VueJsx.KeygenHTMLAttributes<HTMLElement>, HTMLElement>;
-            label: VueJsx.DetailedHTMLProps<VueJsx.LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>;
-            legend: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLLegendElement>, HTMLLegendElement>;
-            li: VueJsx.DetailedHTMLProps<VueJsx.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>;
-            link: VueJsx.DetailedHTMLProps<VueJsx.LinkHTMLAttributes<HTMLLinkElement>, HTMLLinkElement>;
-            main: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            map: VueJsx.DetailedHTMLProps<VueJsx.MapHTMLAttributes<HTMLMapElement>, HTMLMapElement>;
-            mark: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            menu: VueJsx.DetailedHTMLProps<VueJsx.MenuHTMLAttributes<HTMLElement>, HTMLElement>;
-            menuitem: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            meta: VueJsx.DetailedHTMLProps<VueJsx.MetaHTMLAttributes<HTMLMetaElement>, HTMLMetaElement>;
-            meter: VueJsx.DetailedHTMLProps<VueJsx.MeterHTMLAttributes<HTMLElement>, HTMLElement>;
-            nav: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            noindex: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            noscript: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            object: VueJsx.DetailedHTMLProps<VueJsx.ObjectHTMLAttributes<HTMLObjectElement>, HTMLObjectElement>;
-            ol: VueJsx.DetailedHTMLProps<VueJsx.OlHTMLAttributes<HTMLOListElement>, HTMLOListElement>;
-            optgroup: VueJsx.DetailedHTMLProps<VueJsx.OptgroupHTMLAttributes<HTMLOptGroupElement>, HTMLOptGroupElement>;
-            option: VueJsx.DetailedHTMLProps<VueJsx.OptionHTMLAttributes<HTMLOptionElement>, HTMLOptionElement>;
-            output: VueJsx.DetailedHTMLProps<VueJsx.OutputHTMLAttributes<HTMLElement>, HTMLElement>;
-            p: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>;
-            param: VueJsx.DetailedHTMLProps<VueJsx.ParamHTMLAttributes<HTMLParamElement>, HTMLParamElement>;
-            picture: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            pre: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLPreElement>, HTMLPreElement>;
-            progress: VueJsx.DetailedHTMLProps<VueJsx.ProgressHTMLAttributes<HTMLProgressElement>, HTMLProgressElement>;
-            q: VueJsx.DetailedHTMLProps<VueJsx.QuoteHTMLAttributes<HTMLQuoteElement>, HTMLQuoteElement>;
-            rp: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            rt: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            ruby: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            s: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            samp: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            script: VueJsx.DetailedHTMLProps<VueJsx.ScriptHTMLAttributes<HTMLScriptElement>, HTMLScriptElement>;
-            section: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            select: VueJsx.DetailedHTMLProps<VueJsx.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>;
-            small: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            source: VueJsx.DetailedHTMLProps<VueJsx.SourceHTMLAttributes<HTMLSourceElement>, HTMLSourceElement>;
-            span: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
-            strong: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            style: VueJsx.DetailedHTMLProps<VueJsx.StyleHTMLAttributes<HTMLStyleElement>, HTMLStyleElement>;
-            sub: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            summary: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            sup: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            table: VueJsx.DetailedHTMLProps<VueJsx.TableHTMLAttributes<HTMLTableElement>, HTMLTableElement>;
-            template: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLTemplateElement>, HTMLTemplateElement>;
-            tbody: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLTableSectionElement>, HTMLTableSectionElement>;
-            td: VueJsx.DetailedHTMLProps<VueJsx.TdHTMLAttributes<HTMLTableDataCellElement>, HTMLTableDataCellElement>;
-            textarea: VueJsx.DetailedHTMLProps<VueJsx.TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>;
-            tfoot: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLTableSectionElement>, HTMLTableSectionElement>;
-            th: VueJsx.DetailedHTMLProps<VueJsx.ThHTMLAttributes<HTMLTableHeaderCellElement>, HTMLTableHeaderCellElement>;
-            thead: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLTableSectionElement>, HTMLTableSectionElement>;
-            time: VueJsx.DetailedHTMLProps<VueJsx.TimeHTMLAttributes<HTMLElement>, HTMLElement>;
-            title: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLTitleElement>, HTMLTitleElement>;
-            tr: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLTableRowElement>, HTMLTableRowElement>;
-            track: VueJsx.DetailedHTMLProps<VueJsx.TrackHTMLAttributes<HTMLTrackElement>, HTMLTrackElement>;
-            u: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            ul: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLUListElement>, HTMLUListElement>;
-            "var": VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            video: VueJsx.DetailedHTMLProps<VueJsx.VideoHTMLAttributes<HTMLVideoElement>, HTMLVideoElement>;
-            wbr: VueJsx.DetailedHTMLProps<VueJsx.HTMLAttributes<HTMLElement>, HTMLElement>;
-            webview: VueJsx.DetailedHTMLProps<VueJsx.WebViewHTMLAttributes<HTMLWebViewElement>, HTMLWebViewElement>;
+            a: TsxVue.DetailedHTMLProps<TsxVue.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
+            abbr: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            address: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            area: TsxVue.DetailedHTMLProps<TsxVue.AreaHTMLAttributes<HTMLAreaElement>, HTMLAreaElement>;
+            article: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            aside: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            audio: TsxVue.DetailedHTMLProps<TsxVue.AudioHTMLAttributes<HTMLAudioElement>, HTMLAudioElement>;
+            b: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            base: TsxVue.DetailedHTMLProps<TsxVue.BaseHTMLAttributes<HTMLBaseElement>, HTMLBaseElement>;
+            bdi: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            bdo: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            big: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            blockquote: TsxVue.DetailedHTMLProps<TsxVue.BlockquoteHTMLAttributes<HTMLElement>, HTMLElement>;
+            body: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLBodyElement>, HTMLBodyElement>;
+            br: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLBRElement>, HTMLBRElement>;
+            button: TsxVue.DetailedHTMLProps<TsxVue.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+            canvas: TsxVue.DetailedHTMLProps<TsxVue.CanvasHTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement>;
+            caption: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            cite: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            code: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            col: TsxVue.DetailedHTMLProps<TsxVue.ColHTMLAttributes<HTMLTableColElement>, HTMLTableColElement>;
+            colgroup: TsxVue.DetailedHTMLProps<TsxVue.ColgroupHTMLAttributes<HTMLTableColElement>, HTMLTableColElement>;
+            data: TsxVue.DetailedHTMLProps<TsxVue.DataHTMLAttributes<HTMLDataElement>, HTMLDataElement>;
+            datalist: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLDataListElement>, HTMLDataListElement>;
+            dd: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            del: TsxVue.DetailedHTMLProps<TsxVue.DelHTMLAttributes<HTMLElement>, HTMLElement>;
+            details: TsxVue.DetailedHTMLProps<TsxVue.DetailsHTMLAttributes<HTMLElement>, HTMLElement>;
+            dfn: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            dialog: TsxVue.DetailedHTMLProps<TsxVue.DialogHTMLAttributes<HTMLDialogElement>, HTMLDialogElement>;
+            div: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+            dl: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLDListElement>, HTMLDListElement>;
+            dt: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            em: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            embed: TsxVue.DetailedHTMLProps<TsxVue.EmbedHTMLAttributes<HTMLEmbedElement>, HTMLEmbedElement>;
+            fieldset: TsxVue.DetailedHTMLProps<TsxVue.FieldsetHTMLAttributes<HTMLFieldSetElement>, HTMLFieldSetElement>;
+            figcaption: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            figure: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            footer: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            form: TsxVue.DetailedHTMLProps<TsxVue.FormHTMLAttributes<HTMLFormElement>, HTMLFormElement>;
+            h1: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+            h2: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+            h3: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+            h4: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+            h5: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+            h6: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+            head: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLHeadElement>, HTMLHeadElement>;
+            header: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            hgroup: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            hr: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLHRElement>, HTMLHRElement>;
+            html: TsxVue.DetailedHTMLProps<TsxVue.HtmlHTMLAttributes<HTMLHtmlElement>, HTMLHtmlElement>;
+            i: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            iframe: TsxVue.DetailedHTMLProps<TsxVue.IframeHTMLAttributes<HTMLIFrameElement>, HTMLIFrameElement>;
+            img: TsxVue.DetailedHTMLProps<TsxVue.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>;
+            input: TsxVue.DetailedHTMLProps<TsxVue.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
+            ins: TsxVue.DetailedHTMLProps<TsxVue.InsHTMLAttributes<HTMLModElement>, HTMLModElement>;
+            kbd: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            keygen: TsxVue.DetailedHTMLProps<TsxVue.KeygenHTMLAttributes<HTMLElement>, HTMLElement>;
+            label: TsxVue.DetailedHTMLProps<TsxVue.LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>;
+            legend: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLLegendElement>, HTMLLegendElement>;
+            li: TsxVue.DetailedHTMLProps<TsxVue.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>;
+            link: TsxVue.DetailedHTMLProps<TsxVue.LinkHTMLAttributes<HTMLLinkElement>, HTMLLinkElement>;
+            main: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            map: TsxVue.DetailedHTMLProps<TsxVue.MapHTMLAttributes<HTMLMapElement>, HTMLMapElement>;
+            mark: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            menu: TsxVue.DetailedHTMLProps<TsxVue.MenuHTMLAttributes<HTMLElement>, HTMLElement>;
+            menuitem: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            meta: TsxVue.DetailedHTMLProps<TsxVue.MetaHTMLAttributes<HTMLMetaElement>, HTMLMetaElement>;
+            meter: TsxVue.DetailedHTMLProps<TsxVue.MeterHTMLAttributes<HTMLElement>, HTMLElement>;
+            nav: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            noindex: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            noscript: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            object: TsxVue.DetailedHTMLProps<TsxVue.ObjectHTMLAttributes<HTMLObjectElement>, HTMLObjectElement>;
+            ol: TsxVue.DetailedHTMLProps<TsxVue.OlHTMLAttributes<HTMLOListElement>, HTMLOListElement>;
+            optgroup: TsxVue.DetailedHTMLProps<TsxVue.OptgroupHTMLAttributes<HTMLOptGroupElement>, HTMLOptGroupElement>;
+            option: TsxVue.DetailedHTMLProps<TsxVue.OptionHTMLAttributes<HTMLOptionElement>, HTMLOptionElement>;
+            output: TsxVue.DetailedHTMLProps<TsxVue.OutputHTMLAttributes<HTMLElement>, HTMLElement>;
+            p: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>;
+            param: TsxVue.DetailedHTMLProps<TsxVue.ParamHTMLAttributes<HTMLParamElement>, HTMLParamElement>;
+            picture: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            pre: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLPreElement>, HTMLPreElement>;
+            progress: TsxVue.DetailedHTMLProps<TsxVue.ProgressHTMLAttributes<HTMLProgressElement>, HTMLProgressElement>;
+            q: TsxVue.DetailedHTMLProps<TsxVue.QuoteHTMLAttributes<HTMLQuoteElement>, HTMLQuoteElement>;
+            rp: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            rt: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            ruby: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            s: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            samp: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            script: TsxVue.DetailedHTMLProps<TsxVue.ScriptHTMLAttributes<HTMLScriptElement>, HTMLScriptElement>;
+            section: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            select: TsxVue.DetailedHTMLProps<TsxVue.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>;
+            small: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            source: TsxVue.DetailedHTMLProps<TsxVue.SourceHTMLAttributes<HTMLSourceElement>, HTMLSourceElement>;
+            span: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
+            strong: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            style: TsxVue.DetailedHTMLProps<TsxVue.StyleHTMLAttributes<HTMLStyleElement>, HTMLStyleElement>;
+            sub: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            summary: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            sup: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            table: TsxVue.DetailedHTMLProps<TsxVue.TableHTMLAttributes<HTMLTableElement>, HTMLTableElement>;
+            template: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLTemplateElement>, HTMLTemplateElement>;
+            tbody: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLTableSectionElement>, HTMLTableSectionElement>;
+            td: TsxVue.DetailedHTMLProps<TsxVue.TdHTMLAttributes<HTMLTableDataCellElement>, HTMLTableDataCellElement>;
+            textarea: TsxVue.DetailedHTMLProps<TsxVue.TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>;
+            tfoot: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLTableSectionElement>, HTMLTableSectionElement>;
+            th: TsxVue.DetailedHTMLProps<TsxVue.ThHTMLAttributes<HTMLTableHeaderCellElement>, HTMLTableHeaderCellElement>;
+            thead: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLTableSectionElement>, HTMLTableSectionElement>;
+            time: TsxVue.DetailedHTMLProps<TsxVue.TimeHTMLAttributes<HTMLElement>, HTMLElement>;
+            title: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLTitleElement>, HTMLTitleElement>;
+            tr: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLTableRowElement>, HTMLTableRowElement>;
+            track: TsxVue.DetailedHTMLProps<TsxVue.TrackHTMLAttributes<HTMLTrackElement>, HTMLTrackElement>;
+            u: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            ul: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLUListElement>, HTMLUListElement>;
+            "var": TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            video: TsxVue.DetailedHTMLProps<TsxVue.VideoHTMLAttributes<HTMLVideoElement>, HTMLVideoElement>;
+            wbr: TsxVue.DetailedHTMLProps<TsxVue.HTMLAttributes<HTMLElement>, HTMLElement>;
+            webview: TsxVue.DetailedHTMLProps<TsxVue.WebViewHTMLAttributes<HTMLWebViewElement>, HTMLWebViewElement>;
 
             // SVG
-            svg: VueJsx.SVGProps<SVGSVGElement>;
+            svg: TsxVue.SVGProps<SVGSVGElement>;
 
-            animate: VueJsx.SVGProps<SVGElement>; // TODO: It is SVGAnimateElement but is not in TypeScript's lib.dom.d.ts for now.
-            animateMotion: VueJsx.SVGProps<SVGElement>;
-            animateTransform: VueJsx.SVGProps<SVGElement>; // TODO: It is SVGAnimateTransformElement but is not in TypeScript's lib.dom.d.ts for now.
-            circle: VueJsx.SVGProps<SVGCircleElement>;
-            clipPath: VueJsx.SVGProps<SVGClipPathElement>;
-            defs: VueJsx.SVGProps<SVGDefsElement>;
-            desc: VueJsx.SVGProps<SVGDescElement>;
-            ellipse: VueJsx.SVGProps<SVGEllipseElement>;
-            feBlend: VueJsx.SVGProps<SVGFEBlendElement>;
-            feColorMatrix: VueJsx.SVGProps<SVGFEColorMatrixElement>;
-            feComponentTransfer: VueJsx.SVGProps<SVGFEComponentTransferElement>;
-            feComposite: VueJsx.SVGProps<SVGFECompositeElement>;
-            feConvolveMatrix: VueJsx.SVGProps<SVGFEConvolveMatrixElement>;
-            feDiffuseLighting: VueJsx.SVGProps<SVGFEDiffuseLightingElement>;
-            feDisplacementMap: VueJsx.SVGProps<SVGFEDisplacementMapElement>;
-            feDistantLight: VueJsx.SVGProps<SVGFEDistantLightElement>;
-            feDropShadow: VueJsx.SVGProps<SVGFEDropShadowElement>;
-            feFlood: VueJsx.SVGProps<SVGFEFloodElement>;
-            feFuncA: VueJsx.SVGProps<SVGFEFuncAElement>;
-            feFuncB: VueJsx.SVGProps<SVGFEFuncBElement>;
-            feFuncG: VueJsx.SVGProps<SVGFEFuncGElement>;
-            feFuncR: VueJsx.SVGProps<SVGFEFuncRElement>;
-            feGaussianBlur: VueJsx.SVGProps<SVGFEGaussianBlurElement>;
-            feImage: VueJsx.SVGProps<SVGFEImageElement>;
-            feMerge: VueJsx.SVGProps<SVGFEMergeElement>;
-            feMergeNode: VueJsx.SVGProps<SVGFEMergeNodeElement>;
-            feMorphology: VueJsx.SVGProps<SVGFEMorphologyElement>;
-            feOffset: VueJsx.SVGProps<SVGFEOffsetElement>;
-            fePointLight: VueJsx.SVGProps<SVGFEPointLightElement>;
-            feSpecularLighting: VueJsx.SVGProps<SVGFESpecularLightingElement>;
-            feSpotLight: VueJsx.SVGProps<SVGFESpotLightElement>;
-            feTile: VueJsx.SVGProps<SVGFETileElement>;
-            feTurbulence: VueJsx.SVGProps<SVGFETurbulenceElement>;
-            filter: VueJsx.SVGProps<SVGFilterElement>;
-            foreignObject: VueJsx.SVGProps<SVGForeignObjectElement>;
-            g: VueJsx.SVGProps<SVGGElement>;
-            image: VueJsx.SVGProps<SVGImageElement>;
-            line: VueJsx.SVGProps<SVGLineElement>;
-            linearGradient: VueJsx.SVGProps<SVGLinearGradientElement>;
-            marker: VueJsx.SVGProps<SVGMarkerElement>;
-            mask: VueJsx.SVGProps<SVGMaskElement>;
-            metadata: VueJsx.SVGProps<SVGMetadataElement>;
-            mpath: VueJsx.SVGProps<SVGElement>;
-            path: VueJsx.SVGProps<SVGPathElement>;
-            pattern: VueJsx.SVGProps<SVGPatternElement>;
-            polygon: VueJsx.SVGProps<SVGPolygonElement>;
-            polyline: VueJsx.SVGProps<SVGPolylineElement>;
-            radialGradient: VueJsx.SVGProps<SVGRadialGradientElement>;
-            rect: VueJsx.SVGProps<SVGRectElement>;
-            stop: VueJsx.SVGProps<SVGStopElement>;
-            switch: VueJsx.SVGProps<SVGSwitchElement>;
-            symbol: VueJsx.SVGProps<SVGSymbolElement>;
-            text: VueJsx.SVGProps<SVGTextElement>;
-            textPath: VueJsx.SVGProps<SVGTextPathElement>;
-            tspan: VueJsx.SVGProps<SVGTSpanElement>;
-            use: VueJsx.SVGProps<SVGUseElement>;
-            view: VueJsx.SVGProps<SVGViewElement>;
+            animate: TsxVue.SVGProps<SVGElement>; // TODO: It is SVGAnimateElement but is not in TypeScript's lib.dom.d.ts for now.
+            animateMotion: TsxVue.SVGProps<SVGElement>;
+            animateTransform: TsxVue.SVGProps<SVGElement>; // TODO: It is SVGAnimateTransformElement but is not in TypeScript's lib.dom.d.ts for now.
+            circle: TsxVue.SVGProps<SVGCircleElement>;
+            clipPath: TsxVue.SVGProps<SVGClipPathElement>;
+            defs: TsxVue.SVGProps<SVGDefsElement>;
+            desc: TsxVue.SVGProps<SVGDescElement>;
+            ellipse: TsxVue.SVGProps<SVGEllipseElement>;
+            feBlend: TsxVue.SVGProps<SVGFEBlendElement>;
+            feColorMatrix: TsxVue.SVGProps<SVGFEColorMatrixElement>;
+            feComponentTransfer: TsxVue.SVGProps<SVGFEComponentTransferElement>;
+            feComposite: TsxVue.SVGProps<SVGFECompositeElement>;
+            feConvolveMatrix: TsxVue.SVGProps<SVGFEConvolveMatrixElement>;
+            feDiffuseLighting: TsxVue.SVGProps<SVGFEDiffuseLightingElement>;
+            feDisplacementMap: TsxVue.SVGProps<SVGFEDisplacementMapElement>;
+            feDistantLight: TsxVue.SVGProps<SVGFEDistantLightElement>;
+            feDropShadow: TsxVue.SVGProps<SVGFEDropShadowElement>;
+            feFlood: TsxVue.SVGProps<SVGFEFloodElement>;
+            feFuncA: TsxVue.SVGProps<SVGFEFuncAElement>;
+            feFuncB: TsxVue.SVGProps<SVGFEFuncBElement>;
+            feFuncG: TsxVue.SVGProps<SVGFEFuncGElement>;
+            feFuncR: TsxVue.SVGProps<SVGFEFuncRElement>;
+            feGaussianBlur: TsxVue.SVGProps<SVGFEGaussianBlurElement>;
+            feImage: TsxVue.SVGProps<SVGFEImageElement>;
+            feMerge: TsxVue.SVGProps<SVGFEMergeElement>;
+            feMergeNode: TsxVue.SVGProps<SVGFEMergeNodeElement>;
+            feMorphology: TsxVue.SVGProps<SVGFEMorphologyElement>;
+            feOffset: TsxVue.SVGProps<SVGFEOffsetElement>;
+            fePointLight: TsxVue.SVGProps<SVGFEPointLightElement>;
+            feSpecularLighting: TsxVue.SVGProps<SVGFESpecularLightingElement>;
+            feSpotLight: TsxVue.SVGProps<SVGFESpotLightElement>;
+            feTile: TsxVue.SVGProps<SVGFETileElement>;
+            feTurbulence: TsxVue.SVGProps<SVGFETurbulenceElement>;
+            filter: TsxVue.SVGProps<SVGFilterElement>;
+            foreignObject: TsxVue.SVGProps<SVGForeignObjectElement>;
+            g: TsxVue.SVGProps<SVGGElement>;
+            image: TsxVue.SVGProps<SVGImageElement>;
+            line: TsxVue.SVGProps<SVGLineElement>;
+            linearGradient: TsxVue.SVGProps<SVGLinearGradientElement>;
+            marker: TsxVue.SVGProps<SVGMarkerElement>;
+            mask: TsxVue.SVGProps<SVGMaskElement>;
+            metadata: TsxVue.SVGProps<SVGMetadataElement>;
+            mpath: TsxVue.SVGProps<SVGElement>;
+            path: TsxVue.SVGProps<SVGPathElement>;
+            pattern: TsxVue.SVGProps<SVGPatternElement>;
+            polygon: TsxVue.SVGProps<SVGPolygonElement>;
+            polyline: TsxVue.SVGProps<SVGPolylineElement>;
+            radialGradient: TsxVue.SVGProps<SVGRadialGradientElement>;
+            rect: TsxVue.SVGProps<SVGRectElement>;
+            stop: TsxVue.SVGProps<SVGStopElement>;
+            switch: TsxVue.SVGProps<SVGSwitchElement>;
+            symbol: TsxVue.SVGProps<SVGSymbolElement>;
+            text: TsxVue.SVGProps<SVGTextElement>;
+            textPath: TsxVue.SVGProps<SVGTextPathElement>;
+            tspan: TsxVue.SVGProps<SVGTSpanElement>;
+            use: TsxVue.SVGProps<SVGUseElement>;
+            view: TsxVue.SVGProps<SVGViewElement>;
             [ key: string ]: any;
         }
     }
