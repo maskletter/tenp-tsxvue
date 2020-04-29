@@ -1,6 +1,8 @@
 # Tsx for vue
 
-Syntax declaration of tsx containing a lot of vue
+> 包含了大量从react中移植过来的对jsx的html类型声明，及css样式声明
+
+> 默认导出一个继承自vue的类，可以通过此类来添加tsx下标签的属性效验
 
 ```typescript
 import TsxVue from '@tenp/tsxvue';
