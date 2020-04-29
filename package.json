@@ -1,6 +1,6 @@
 {
   "name": "@tenp/tsxvue",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,10 @@
   "license": "ISC",
   "homepage": "https://github.com/maskletter/tenp-tsxvue",
   "devDependencies": {
-    "csstype": "^2.6.10"
+    "csstype": "^2.6.10",
+    "vue-hooks": "^0.3.2",
+    "vue-class-component": "^7.2.2",
+    "vue-property-decorator": "^8.3.0",
+    "vuex-module-decorators": "^0.16.1"
   }
 }
