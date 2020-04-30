@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { ComponentOptions } from 'vue/types/umd';
+import { ComponentOptions } from 'vue';
 import TsxVue from './jsx/global'
 import './fild'
 import './vue-hooks'

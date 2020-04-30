@@ -1,6 +1,6 @@
 {
   "name": "@tenp/tsxvue",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "maskletter",
   "license": "ISC",
   "homepage": "https://github.com/maskletter/tenp-tsxvue",
-  "devDependencies": {
+  "dependencies": {
     "csstype": "^2.6.10",
     "vue-hooks": "^0.3.2",
     "vue-class-component": "^7.2.2",

@@ -3,7 +3,7 @@
 
 import * as CSS from 'csstype'
 import Vue, { VNode } from "vue";
-import { ComponentOptions } from 'vue/types/umd';
+import { ComponentOptions } from 'vue';
 
 
 
