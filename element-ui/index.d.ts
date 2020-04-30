@@ -91,7 +91,7 @@ import { VNode } from 'vue'
 
 // }
 interface CommonProps {
-    children?: VNode|string
+    children?: VNode|string|VNode[]
     id?: string
     class?: string
     style?: string
@@ -217,7 +217,22 @@ declare module 'element-ui' {
         constructor(props: {  [index in keyof ElOptionGroup]?: ElOptionGroup[index]; }&CommonProps )
     }
     class Pagination extends Vue {
-        constructor(props: {  [index in keyof ElPagination]?: ElPagination[index]; }&CommonProps )
+        constructor(props: {  [index in keyof ElPagination]?: ElPagination[index]; }&CommonProps&{
+            /**是否为分页按钮添加背景色 */
+            background?: boolean
+            /**只有一页时是否隐藏 */
+            hideOnSinglePage?: boolean
+            /**是否禁用 */
+            disabled?: boolean
+            /**currentPage 改变时会触发 */
+            'onCurrent-change'?:(page: number) => void
+            /**pageSize 改变时会触发 */
+            'onSize-change'?: (page: number) => void
+            /**用户点击上一页按钮改变当前页后触发 */
+            'onPrev-click'?: (page: number) => void
+            /**用户点击下一页按钮改变当前页后触发 */
+            'onNext-click'?: (page: number) => void
+        } )
     }
     class Popover extends Vue {
         constructor(props: {  [index in keyof ElPopover]?: ElPopover[index]; }&CommonProps )
