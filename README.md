@@ -1,5 +1,16 @@
 # Tsx for vue
 
+> 需要在tsconfig.json中配置的compilerOptions中配置strictFunctionTypes为false
+
+```json
+{
+    "compilerOptions": {
+        "strictFunctionTypes": false
+    }
+}
+```
+
+
 > 包含了大量从react中移植过来的对jsx的html类型声明，及css样式声明
 
 > 默认导出一个继承自vue的类，可以通过此类来添加tsx下标签的属性效验

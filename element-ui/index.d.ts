@@ -1,3 +1,8 @@
+/**
+ * 对应
+ * "element-ui": "^2.13.1"
+ */
+
 import Vue from 'vue'
 import 'element-ui'
 import 'Vue'
@@ -80,251 +85,250 @@ import { ElPageHeader } from 'element-ui/types/page-header'
 import { ElAvatar } from 'element-ui/types/avatar'
 import { ElDrawer } from 'element-ui/types/drawer'
 import { ElPopconfirm } from 'element-ui/types/popconfirm'
-import { VNode } from 'vue/types/umd'
+import { VNode } from 'vue'
 
 // interface common {
 
 // }
+interface CommonProps {
+    children?: VNode|string
+    id?: string
+    class?: string
+    style?: string
+}
 
 declare module 'element-ui' {
    
     
     class Alert extends Vue {
-        constructor(props: {  [index in keyof ElAlert]?: ElAlert[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElAlert]?: ElAlert[index]; }&CommonProps)
     }
     class Aside extends Vue {
-        constructor(props: {  [index in keyof ElAside]?: ElAside[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElAside]?: ElAside[index]; }&CommonProps)
     }
     class Autocomplete extends Vue {
-        constructor(props: {  [index in keyof ElAutocomplete]?: ElAutocomplete[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElAutocomplete]?: ElAutocomplete[index]; }&CommonProps)
     }
     class Badge extends Vue {
-        constructor(props: {  [index in keyof ElBadge]?: ElBadge[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElBadge]?: ElBadge[index]; }&CommonProps)
     }
     class Breadcrumb extends Vue {
-        constructor(props: {  [index in keyof ElBreadcrumb]?: ElBreadcrumb[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElBreadcrumb]?: ElBreadcrumb[index]; }&CommonProps)
     }
     class BreadcrumbItem extends Vue {
-        constructor(props: {  [index in keyof ElBreadcrumbItem]?: ElBreadcrumbItem[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElBreadcrumbItem]?: ElBreadcrumbItem[index]; }&CommonProps )
     }
     class Button extends Vue {
-        constructor(props: { [index in keyof ElButton]?: ElButton[index]; }&{ children?: VNode|string } )
+        constructor(props: { [index in keyof ElButton]?: ElButton[index]; }&CommonProps )
     }
     class ButtonGroup extends Vue {
-        constructor(props: {  [index in keyof ElButtonGroup]?: ElButtonGroup[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElButtonGroup]?: ElButtonGroup[index]; }&CommonProps )
     }
     class Card extends Vue {
-        constructor(props: {  [index in keyof ElCard]?: ElCard[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCard]?: ElCard[index]; }&CommonProps)
     }
     class Carousel extends Vue {
-        constructor(props: {  [index in keyof ElCarousel]?: ElCarousel[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCarousel]?: ElCarousel[index]; }&CommonProps )
     }
     class CarouselItem extends Vue {
-        constructor(props: {  [index in keyof ElCarouselItem]?: ElCarouselItem[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCarouselItem]?: ElCarouselItem[index]; }&CommonProps )
     }
     class Cascader extends Vue {
-        constructor(props: {  [index in keyof ElCascader]?: ElCascader[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCascader]?: ElCascader[index]; }&CommonProps )
     }
     class Checkbox extends Vue {
-        constructor(props: {  [index in keyof ElCheckbox]?: ElCheckbox[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCheckbox]?: ElCheckbox[index]; }&CommonProps )
     }
     class CheckboxButton extends Vue {
-        constructor(props: {  [index in keyof ElCheckboxButton]?: ElCheckboxButton[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCheckboxButton]?: ElCheckboxButton[index]; }&CommonProps )
     }
     class CheckboxGroup extends Vue {
-        constructor(props: {  [index in keyof ElCheckboxGroup]?: ElCheckboxGroup[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCheckboxGroup]?: ElCheckboxGroup[index]; }&CommonProps )
     }
     class Col extends Vue {
-        constructor(props: {  [index in keyof ElCol]?: ElCol[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCol]?: ElCol[index]; }&CommonProps )
     }
     class Collapse extends Vue {
-        constructor(props: {  [index in keyof ElCollapse]?: ElCollapse[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCollapse]?: ElCollapse[index]; }&CommonProps )
     }
     class CollapseItem extends Vue {
-        constructor(props: {  [index in keyof ElCollapseItem]?: ElCollapseItem[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElCollapseItem]?: ElCollapseItem[index]; }&CommonProps )
     }
     class ColorPicker extends Vue {
-        constructor(props: {  [index in keyof ElColorPicker]?: ElColorPicker[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElColorPicker]?: ElColorPicker[index]; }&CommonProps )
     }
     class Container extends Vue {
-        constructor(props: {  [index in keyof ElContainer]?: ElContainer[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElContainer]?: ElContainer[index]; }&CommonProps )
     }
     class DatePicker extends Vue {
-        constructor(props: {  [index in keyof ElDatePicker]?: ElDatePicker[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElDatePicker]?: ElDatePicker[index]; }&CommonProps )
     }
     class Dialog extends Vue {
-        constructor(props: {  [index in keyof ElDialog]?: ElDialog[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElDialog]?: ElDialog[index]; }&CommonProps )
     }
     class Dropdown extends Vue {
-        constructor(props: {  [index in keyof ElDropdown]?: ElDropdown[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElDropdown]?: ElDropdown[index]; }&CommonProps )
     }
     class DropdownItem extends Vue {
-        constructor(props: {  [index in keyof ElDropdownItem]?: ElDropdownItem[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElDropdownItem]?: ElDropdownItem[index]; }&CommonProps )
     }
     class DropdownMenu extends Vue {
-        constructor(props: {  [index in keyof ElDropdownMenu]?: ElDropdownMenu[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElDropdownMenu]?: ElDropdownMenu[index]; }&CommonProps )
     }
     class Footer extends Vue {
-        constructor(props: {  [index in keyof ElFooter]?: ElFooter[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElFooter]?: ElFooter[index]; }&CommonProps )
     }
     class Form extends Vue {
-        constructor(props: {  [index in keyof ElForm]?: ElForm[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElForm]?: ElForm[index]; }&CommonProps )
     }
     class FormItem extends Vue {
-        constructor(props: {  [index in keyof ElFormItem]?: ElFormItem[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElFormItem]?: ElFormItem[index]; }&CommonProps )
     }
     class Header extends Vue {
-        constructor(props: {  [index in keyof ElHeader]?: ElHeader[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElHeader]?: ElHeader[index]; }&CommonProps )
     }
     class Input extends Vue {
-        constructor(props: {  [index in keyof ElInput]?: ElInput[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElInput]?: ElInput[index]; }&CommonProps )
     }
     class InputNumber extends Vue {
-        constructor(props: {  [index in keyof ElInputNumber]?: ElInputNumber[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElInputNumber]?: ElInputNumber[index]; }&CommonProps )
     }
-    class Loading extends Vue {
-        constructor(props: {  [index in keyof ElLoading]?: ElLoading[index]; }&{ children?: VNode|string } )
-    }
+    
     class Main extends Vue {
-        constructor(props: {  [index in keyof ElMain]?: ElMain[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElMain]?: ElMain[index]; }&CommonProps )
     }
     class Menu extends Vue {
-        constructor(props: {  [index in keyof ElMenu]?: ElMenu[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElMenu]?: ElMenu[index]; }&CommonProps )
     }
     class MenuItem extends Vue {
-        constructor(props: {  [index in keyof ElMenuItem]?: ElMenuItem[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElMenuItem]?: ElMenuItem[index]; }&CommonProps )
     }
     class MenuItemGroup extends Vue {
-        constructor(props: {  [index in keyof ElMenuItemGroup]?: ElMenuItemGroup[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElMenuItemGroup]?: ElMenuItemGroup[index]; }&CommonProps )
     }
-    class Message extends Vue {
-        constructor(props: {  [index in keyof ElMessage]?: ElMessage[index]; }&{ children?: VNode|string } )
-    }
-    class MessageBox extends Vue {
-        constructor(props: {  [index in keyof ElMessageBox]?: ElMessageBox[index]; }&{ children?: VNode|string } )
-    }
+  
     class Notification extends Vue {
-        constructor(props: {  [index in keyof ElNotification]?: ElNotification[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElNotification]?: ElNotification[index]; }&CommonProps )
     }
     class Option extends Vue {
-        constructor(props: {  [index in keyof ElOption]?: ElOption[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElOption]?: ElOption[index]; }&CommonProps )
     }
     class OptionGroup extends Vue {
-        constructor(props: {  [index in keyof ElOptionGroup]?: ElOptionGroup[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElOptionGroup]?: ElOptionGroup[index]; }&CommonProps )
     }
     class Pagination extends Vue {
-        constructor(props: {  [index in keyof ElPagination]?: ElPagination[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElPagination]?: ElPagination[index]; }&CommonProps )
     }
     class Popover extends Vue {
-        constructor(props: {  [index in keyof ElPopover]?: ElPopover[index]; }&{ children?: VNode|string } )
+        constructor(props: {  [index in keyof ElPopover]?: ElPopover[index]; }&CommonProps )
     }
     class Progress extends Vue {
-        constructor(props: {  [index in keyof ElProgress]?: ElProgress[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElProgress]?: ElProgress[index]; }&CommonProps)
     }
     class Rate extends Vue {
-        constructor(props: {  [index in keyof ElRate]?: ElRate[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElRate]?: ElRate[index]; }&CommonProps)
     }
     class Radio extends Vue {
-        constructor(props: {  [index in keyof ElRadio]?: ElRadio[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElRadio]?: ElRadio[index]; }&CommonProps)
     }
     class RadioButton extends Vue {
-        constructor(props: {  [index in keyof ElRadioButton]?: ElRadioButton[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElRadioButton]?: ElRadioButton[index]; }&CommonProps)
     }
     class RadioGroup extends Vue {
-        constructor(props: {  [index in keyof ElRadioGroup]?: ElRadioGroup[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElRadioGroup]?: ElRadioGroup[index]; }&CommonProps)
     }
     class Row extends Vue {
-        constructor(props: {  [index in keyof ElRow]?: ElRow[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElRow]?: ElRow[index]; }&CommonProps)
     }
     class Select extends Vue {
-        constructor(props: {  [index in keyof ElSelect]?: ElSelect[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElSelect]?: ElSelect[index]; }&CommonProps)
     }
     class Slider extends Vue {
-        constructor(props: {  [index in keyof ElSlider]?: ElSlider[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElSlider]?: ElSlider[index]; }&CommonProps)
     }
     class Step extends Vue {
-        constructor(props: {  [index in keyof ElStep]?: ElStep[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElStep]?: ElStep[index]; }&CommonProps)
     }
     class Steps extends Vue {
-        constructor(props: {  [index in keyof ElSteps]?: ElSteps[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElSteps]?: ElSteps[index]; }&CommonProps)
     }
     class Submenu extends Vue {
-        constructor(props: {  [index in keyof ElSubmenu]?: ElSubmenu[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElSubmenu]?: ElSubmenu[index]; }&CommonProps)
     }
     class Switch extends Vue {
-        constructor(props: {  [index in keyof ElSwitch]?: ElSwitch[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElSwitch]?: ElSwitch[index]; }&CommonProps)
     }
     class Table extends Vue {
-        constructor(props: {  [index in keyof ElTable]?: ElTable[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTable]?: ElTable[index]; }&CommonProps)
     }
     class TableColumn extends Vue {
-        constructor(props: {  [index in keyof ElTableColumn]?: ElTableColumn[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTableColumn]?: ElTableColumn[index]; }&CommonProps)
     }
     class Tag extends Vue {
-        constructor(props: {  [index in keyof ElTag]?: ElTag[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTag]?: ElTag[index]; }&CommonProps)
     }
     class Tabs extends Vue {
-        constructor(props: {  [index in keyof ElTabs]?: ElTabs[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTabs]?: ElTabs[index]; }&CommonProps)
     }
     class TabPane extends Vue {
-        constructor(props: {  [index in keyof ElTabPane]?: ElTabPane[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTabPane]?: ElTabPane[index]; }&CommonProps)
     }
     class Timeline extends Vue {
-        constructor(props: {  [index in keyof ElTimeline]?: ElTimeline[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTimeline]?: ElTimeline[index]; }&CommonProps)
     }
     class TimelineItem extends Vue {
-        constructor(props: {  [index in keyof ElTimelineItem]?: ElTimelineItem[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTimelineItem]?: ElTimelineItem[index]; }&CommonProps)
     }
     class TimePicker extends Vue {
-        constructor(props: {  [index in keyof ElTimePicker]?: ElTimePicker[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTimePicker]?: ElTimePicker[index]; }&CommonProps)
     }
     class TimeSelect extends Vue {
-        constructor(props: {  [index in keyof ElTimeSelect]?: ElTimeSelect[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTimeSelect]?: ElTimeSelect[index]; }&CommonProps)
     }
     class Tooltip extends Vue {
-        constructor(props: {  [index in keyof ElTooltip]?: ElTooltip[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTooltip]?: ElTooltip[index]; }&CommonProps)
     }
     class Transfer extends Vue {
-        constructor(props: {  [index in keyof ElTransfer]?: ElTransfer[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTransfer]?: ElTransfer[index]; }&CommonProps)
     }
     class Tree extends Vue {
-        constructor(props: {  [index in keyof ElTree<any, any>]?: ElTree<any, any>[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElTree<any, any>]?: ElTree<any, any>[index]; }&CommonProps)
     }
     class Upload extends Vue {
-        constructor(props: {  [index in keyof ElUpload]?: ElUpload[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElUpload]?: ElUpload[index]; }&CommonProps)
     }
     class Link extends Vue {
-        constructor(props: {  [index in keyof ElLink]?: ElLink[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElLink]?: ElLink[index]; }&CommonProps)
     }
     class Divider extends Vue {
-        constructor(props: {  [index in keyof ElDivider]?: ElDivider[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElDivider]?: ElDivider[index]; }&CommonProps)
     }
     class Icon extends Vue {
-        constructor(props: {  [index in keyof ElIcon]?: ElIcon[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElIcon]?: ElIcon[index]; }&CommonProps)
     }
     class Calendar extends Vue {
-        constructor(props: {  [index in keyof ElCalendar]?: ElCalendar[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElCalendar]?: ElCalendar[index]; }&CommonProps)
     }
     class Image extends Vue {
-        constructor(props: {  [index in keyof ElImage]?: ElImage[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElImage]?: ElImage[index]; }&CommonProps)
     }
     class Backtop extends Vue {
-        constructor(props: {  [index in keyof ElBacktop]?: ElBacktop[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElBacktop]?: ElBacktop[index]; }&CommonProps)
     }
     class InfiniteScroll extends Vue {
-        constructor(props: {  [index in keyof ElInfiniteScroll]?: ElInfiniteScroll[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElInfiniteScroll]?: ElInfiniteScroll[index]; }&CommonProps)
     }
     class PageHeader extends Vue {
-        constructor(props: {  [index in keyof ElPageHeader]?: ElPageHeader[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElPageHeader]?: ElPageHeader[index]; }&CommonProps)
     }
     class Avatar extends Vue {
-        constructor(props: {  [index in keyof ElAvatar]?: ElAvatar[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElAvatar]?: ElAvatar[index]; }&CommonProps)
     }
     class Drawer extends Vue {
-        constructor(props: {  [index in keyof ElDrawer]?: ElDrawer[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElDrawer]?: ElDrawer[index]; }&CommonProps)
     }
     class Popconfirm extends Vue {
-        constructor(props: {  [index in keyof ElPopconfirm]?: ElPopconfirm[index]; }&{ children?: VNode|string })
+        constructor(props: {  [index in keyof ElPopconfirm]?: ElPopconfirm[index]; }&CommonProps)
     }
 
    
