@@ -52,9 +52,21 @@ class Nq extends TsxVue<{ pid: number }, TsxVue.CommonAttrs> {
 
 > 包含了对vue-hooks的ts声明文件及对element-ui的tsx声明文件
 
-element-ui的声明，需要在src目录下，创建一个xx.d.ts文件，在文件中引入如下代码，即可以实现element-ui的tsx支持
+element-ui的声明，需要在src目录下，创建一个xx.d.ts文件，在文件中引入如下代码，即可以实现element-ui的tsx支持,
+element-ui的tsx支持，是根据官方给出的对应版本的ts声明创建的，因此可能不完全
 ```typescript
 
-/// <reference path="../../node_modules/@tenp/tsxvue/element-ui/index.d.ts" />
+/// <reference path="../node_modules/@tenp/tsxvue/element-ui/element-ui@2.13.1.d.ts" />
 
+//或者
+
+/// <reference path="../node_modules/@tenp/tsxvue/element-ui/index.d.ts" />
 ```
+目前已有的element-ui版本
+* element-ui@2.13.1
+* element-ui@2.12.0
+* element-ui@2.11.1
+* element-ui@2.10.1
+* element-ui@2.9.2
+* element-ui@2.8.2
+* element-ui@2.7.2
