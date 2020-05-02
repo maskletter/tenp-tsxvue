@@ -678,7 +678,20 @@ declare namespace TsxVue {
         is?: string;
     }
 
-    type DetailedHTMLProps<E extends HTMLAttributes<T>, T> = ClassAttributes<T> & E;
+    type DetailedHTMLProps<E extends HTMLAttributes<T>, T> = ClassAttributes<T> & E & {
+        on?: {
+            [props: string]: any
+        },
+        nativeOn?: {
+            [props: string]: any
+        },
+        directives?: any[],
+        domProps?: {
+            [props: string]: any
+        },
+        attrs?: E,
+        refInFor?: boolean
+    };
 
     
     interface AnchorHTMLAttributes<T> extends HTMLAttributes<T> {
