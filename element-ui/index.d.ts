@@ -88,16 +88,28 @@ import { ElDrawer } from 'element-ui/types/drawer'
 import { ElPopconfirm } from 'element-ui/types/popconfirm'
 import { VNode } from 'vue'
 
-// interface common {
 
-// }
 interface CommonProps<T> {
     children?: VNode|string|VNode[]
     id?: string
     class?: string|string[]|object
     style?: Css.Properties
     props?: T,
-    attrs?: T
+    attrs?: T,
+    on?: {
+        [props: string]: any
+    },
+    nativeOn?: {
+        [props: string]: any
+    },
+    directives?: any[],
+    scopedSlots?: {
+        [props: string]: (...argv: any) => VNode|VNode[]|string
+    },
+    domProps?: {
+        [props: string]: any
+    }
+    refInFor?: boolean
 }
 
 declare module 'element-ui' {

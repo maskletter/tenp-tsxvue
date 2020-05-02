@@ -39,6 +39,17 @@ class About extends TsxVue {
 }
 
 ```
+
+如果需要使自定义组件能够拥有id,style,props等功能，可以添加如下配置来支持
+```ts
+@Component
+class Nq extends TsxVue<{ pid: number }, TsxVue.CommonAttrs> {
+    render(){
+        return <div>fffffff</div>
+    }
+}
+```
+
 > 包含了对vue-hooks的ts声明文件及对element-ui的tsx声明文件
 
 element-ui的声明，需要在src目录下，创建一个xx.d.ts文件，在文件中引入如下代码，即可以实现element-ui的tsx支持

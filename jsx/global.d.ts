@@ -21,20 +21,41 @@ type NativeUIEvent = UIEvent;
 type NativeWheelEvent = WheelEvent;
 type Booleanish = boolean | 'true' | 'false';
 
-declare class TsxVue<Props = {}> extends Vue {
-    constructor(props: ComponentOptions<any> & ThisType<any> & Props & {
-        scopedSlots?: {
-            [key: string]: (value: any) => void
-        }
-    });
+
+
+/**
+ * class TsxVue<Props = {}, Common = {}>
+ * 
+ * `class TsxVue<{pid: number}, Tsx.CommonAttrs>`
+ */
+declare class TsxVue<Props = {}, T = {}> extends Vue {
+    constructor(props: ComponentOptions<any> & ThisType<any> & Props & T);
 }
 
 export = TsxVue;
 export as namespace TsxVue;
 declare namespace TsxVue {
 
-    class Component<Props = {}> extends Vue {
-        constructor(props: ComponentOptions<any> & ThisType<any> & Props);
+    type CommonAttrs<T = any> = {
+        id?: string
+        class?: string|string[]|object
+        style?: CSS.Properties
+        props?: T,
+        attrs?: T,
+        on?: {
+            [props: string]: any
+        },
+        nativeOn?: {
+            [props: string]: any
+        },
+        directives?: any[],
+        scopedSlots?: {
+            [props: string]: (...argv: any) => VNode|VNode[]|string
+        },
+        domProps?: {
+            [props: string]: any
+        }
+        refInFor?: boolean
     }
 
     interface CSSProperties extends CSS.Properties<string | number> {}
