@@ -102,123 +102,123 @@ interface CommonProps<T> {
 
 declare module 'element-ui' {
   
-    class Alert extends Vue {
+    class Alert extends ElAlert {
         constructor(props: {  [index in keyof ElAlert]?: ElAlert[index]; }&CommonProps<{  [index in keyof ElAlert]?: ElAlert[index]; } >)
     }
-    class Aside extends Vue {
+    class Aside extends ElAside {
         constructor(props: {  [index in keyof ElAside]?: ElAside[index]; }&CommonProps<{  [index in keyof ElAside]?: ElAside[index]; }>)
     }
-    class Autocomplete extends Vue {
+    class Autocomplete extends ElAutocomplete {
         constructor(props: {  [index in keyof ElAutocomplete]?: ElAutocomplete[index]; }&CommonProps<{  [index in keyof ElAutocomplete]?: ElAutocomplete[index]; }>)
     }
-    class Badge extends Vue {
+    class Badge extends ElBadge {
         constructor(props: {  [index in keyof ElBadge]?: ElBadge[index]; }&CommonProps<{  [index in keyof ElBadge]?: ElBadge[index]; }>)
     }
-    class Breadcrumb extends Vue {
+    class Breadcrumb extends ElBreadcrumb {
         constructor(props: {  [index in keyof ElBreadcrumb]?: ElBreadcrumb[index]; }&CommonProps<{  [index in keyof ElBreadcrumb]?: ElBreadcrumb[index]; }>)
     }
-    class BreadcrumbItem extends Vue {
+    class BreadcrumbItem extends ElBreadcrumbItem {
         constructor(props: {  [index in keyof ElBreadcrumbItem]?: ElBreadcrumbItem[index]; }&CommonProps<{  [index in keyof ElBreadcrumbItem]?: ElBreadcrumbItem[index]; }> )
     }
-    class Button extends Vue {
+    class Button extends ElButton {
         constructor(props: { [index in keyof ElButton]?: ElButton[index]; }&CommonProps<{ [index in keyof ElButton]?: ElButton[index]; }> )
     }
-    class ButtonGroup extends Vue {
+    class ButtonGroup extends ElButtonGroup {
         constructor(props: {  [index in keyof ElButtonGroup]?: ElButtonGroup[index]; }&CommonProps<{  [index in keyof ElButtonGroup]?: ElButtonGroup[index]; }> )
     }
-    class Card extends Vue {
+    class Card extends ElCard {
         constructor(props: {  [index in keyof ElCard]?: ElCard[index]; }&CommonProps<{  [index in keyof ElCard]?: ElCard[index]; }>)
     }
-    class Carousel extends Vue {
+    class Carousel extends ElCarousel {
         constructor(props: {  [index in keyof ElCarousel]?: ElCarousel[index]; }&CommonProps<{  [index in keyof ElCarousel]?: ElCarousel[index]; }> )
     }
-    class CarouselItem extends Vue {
+    class CarouselItem extends ElCarouselItem {
         constructor(props: {  [index in keyof ElCarouselItem]?: ElCarouselItem[index]; }&CommonProps<{  [index in keyof ElCarouselItem]?: ElCarouselItem[index]; }> )
     }
-    class Cascader extends Vue {
+    class Cascader extends ElCascader {
         constructor(props: {  [index in keyof ElCascader]?: ElCascader[index]; }&CommonProps<{  [index in keyof ElCascader]?: ElCascader[index]; }> )
     }
-    class Checkbox extends Vue {
+    class Checkbox extends ElCheckbox {
         constructor(props: {  [index in keyof ElCheckbox]?: ElCheckbox[index]; }&CommonProps<{  [index in keyof ElCheckbox]?: ElCheckbox[index]; }> )
     }
-    class CheckboxButton extends Vue {
+    class CheckboxButton extends ElCheckboxButton {
         constructor(props: {  [index in keyof ElCheckboxButton]?: ElCheckboxButton[index]; }&CommonProps<{  [index in keyof ElCheckboxButton]?: ElCheckboxButton[index]; }> )
     }
-    class CheckboxGroup extends Vue {
+    class CheckboxGroup extends ElCheckboxGroup {
         constructor(props: {  [index in keyof ElCheckboxGroup]?: ElCheckboxGroup[index]; }&CommonProps<{  [index in keyof ElCheckboxGroup]?: ElCheckboxGroup[index]; }> )
     }
-    class Col extends Vue {
+    class Col extends ElCol {
         constructor(props: {  [index in keyof ElCol]?: ElCol[index]; }&CommonProps<{  [index in keyof ElCol]?: ElCol[index]; }> )
     }
-    class Collapse extends Vue {
+    class Collapse extends ElCollapse {
         constructor(props: {  [index in keyof ElCollapse]?: ElCollapse[index]; }&CommonProps<{  [index in keyof ElCollapse]?: ElCollapse[index]; }> )
     }
-    class CollapseItem extends Vue {
+    class CollapseItem extends ElCollapseItem {
         constructor(props: {  [index in keyof ElCollapseItem]?: ElCollapseItem[index]; }&CommonProps<{  [index in keyof ElCollapseItem]?: ElCollapseItem[index]; }> )
     }
-    class ColorPicker extends Vue {
+    class ColorPicker extends ElColorPicker {
         constructor(props: {  [index in keyof ElColorPicker]?: ElColorPicker[index]; }&CommonProps<{  [index in keyof ElColorPicker]?: ElColorPicker[index]; }> )
     }
-    class Container extends Vue {
+    class Container extends ElContainer {
         constructor(props: {  [index in keyof ElContainer]?: ElContainer[index]; }&CommonProps<{  [index in keyof ElContainer]?: ElContainer[index]; }> )
     }
-    class DatePicker extends Vue {
+    class DatePicker extends ElDatePicker {
         constructor(props: {  [index in keyof ElDatePicker]?: ElDatePicker[index]; }&CommonProps<{  [index in keyof ElDatePicker]?: ElDatePicker[index]; }> )
     }
-    class Dialog extends Vue {
+    class Dialog extends ElDialog {
         constructor(props: {  [index in keyof ElDialog]?: ElDialog[index]; }&CommonProps<{  [index in keyof ElDialog]?: ElDialog[index]; }> )
     }
-    class Dropdown extends Vue {
+    class Dropdown extends ElDropdown {
         constructor(props: {  [index in keyof ElDropdown]?: ElDropdown[index]; }&CommonProps<{  [index in keyof ElDropdown]?: ElDropdown[index]; }> )
     }
-    class DropdownItem extends Vue {
+    class DropdownItem extends ElDropdownItem {
         constructor(props: {  [index in keyof ElDropdownItem]?: ElDropdownItem[index]; }&CommonProps<{  [index in keyof ElDropdownItem]?: ElDropdownItem[index]; }> )
     }
-    class DropdownMenu extends Vue {
+    class DropdownMenu extends ElDropdownMenu {
         constructor(props: {  [index in keyof ElDropdownMenu]?: ElDropdownMenu[index]; }&CommonProps<{  [index in keyof ElDropdownMenu]?: ElDropdownMenu[index]; }> )
     }
-    class Footer extends Vue {
+    class Footer extends ElFooter {
         constructor(props: {  [index in keyof ElFooter]?: ElFooter[index]; }&CommonProps<{  [index in keyof ElFooter]?: ElFooter[index]; }> )
     }
-    class Form extends Vue {
+    class Form extends ElForm {
         constructor(props: {  [index in keyof ElForm]?: ElForm[index]; }&CommonProps<{  [index in keyof ElForm]?: ElForm[index]; }> )
     }
-    class FormItem extends Vue {
+    class FormItem extends ElFormItem {
         constructor(props: {  [index in keyof ElFormItem]?: ElFormItem[index]; }&CommonProps<{  [index in keyof ElFormItem]?: ElFormItem[index]; }> )
     }
-    class Header extends Vue {
+    class Header extends ElHeader {
         constructor(props: {  [index in keyof ElHeader]?: ElHeader[index]; }&CommonProps<{  [index in keyof ElHeader]?: ElHeader[index]; }> )
     }
-    class Input extends Vue {
+    class Input extends ElInput {
         constructor(props: {  [index in keyof ElInput]?: ElInput[index]; }&CommonProps<{  [index in keyof ElInput]?: ElInput[index]; }> )
     }
-    class InputNumber extends Vue {
+    class InputNumber extends ElInputNumber {
         constructor(props: {  [index in keyof ElInputNumber]?: ElInputNumber[index]; }&CommonProps<{  [index in keyof ElInputNumber]?: ElInputNumber[index]; }> )
     }
     
-    class Main extends Vue {
+    class Main extends ElMain {
         constructor(props: {  [index in keyof ElMain]?: ElMain[index]; }&CommonProps<{  [index in keyof ElMain]?: ElMain[index]; }> )
     }
-    class Menu extends Vue {
+    class Menu extends ElMenu {
         constructor(props: {  [index in keyof ElMenu]?: ElMenu[index]; }&CommonProps<{  [index in keyof ElMenu]?: ElMenu[index]; }> )
     }
-    class MenuItem extends Vue {
+    class MenuItem extends ElMenuItem {
         constructor(props: {  [index in keyof ElMenuItem]?: ElMenuItem[index]; }&CommonProps<{  [index in keyof ElMenuItem]?: ElMenuItem[index]; }> )
     }
-    class MenuItemGroup extends Vue {
+    class MenuItemGroup extends ElMenuItemGroup {
         constructor(props: {  [index in keyof ElMenuItemGroup]?: ElMenuItemGroup[index]; }&CommonProps<{  [index in keyof ElMenuItemGroup]?: ElMenuItemGroup[index]; }> )
     }
   
-    class Notification extends Vue {
-        constructor(props: {  [index in keyof ElNotification]?: ElNotification[index]; }&CommonProps<{  [index in keyof ElNotification]?: ElNotification[index]; }> )
-    }
-    class Option extends Vue {
+    // class Notification extends ElNotification {
+    //     constructor(props: {  [index in keyof ElNotification]?: ElNotification[index]; }&CommonProps<{  [index in keyof ElNotification]?: ElNotification[index]; }> )
+    // }
+    class Option extends ElOption {
         constructor(props: {  [index in keyof ElOption]?: ElOption[index]; }&CommonProps<{  [index in keyof ElOption]?: ElOption[index]; }> )
     }
-    class OptionGroup extends Vue {
+    class OptionGroup extends ElOptionGroup {
         constructor(props: {  [index in keyof ElOptionGroup]?: ElOptionGroup[index]; }&CommonProps<{  [index in keyof ElOptionGroup]?: ElOptionGroup[index]; }> )
     }
-    class Pagination extends Vue {
+    class Pagination extends ElPagination {
         constructor(props: {  [index in keyof ElPagination]?: ElPagination[index]; }&CommonProps<{  [index in keyof ElPagination]?: ElPagination[index]; }>&{
             /**是否为分页按钮添加背景色 */
             background?: boolean
@@ -236,115 +236,115 @@ declare module 'element-ui' {
             'onNext-click'?: (page: number) => void
         } )
     }
-    class Popover extends Vue {
+    class Popover extends ElPopover {
         constructor(props: {  [index in keyof ElPopover]?: ElPopover[index]; }&CommonProps <{  [index in keyof ElPopover]?: ElPopover[index]; }>)
     }
-    class Progress extends Vue {
+    class Progress extends ElProgress {
         constructor(props: {  [index in keyof ElProgress]?: ElProgress[index]; }&CommonProps<{  [index in keyof ElProgress]?: ElProgress[index]; }>)
     }
-    class Rate extends Vue {
+    class Rate extends ElRate {
         constructor(props: {  [index in keyof ElRate]?: ElRate[index]; }&CommonProps<{  [index in keyof ElRate]?: ElRate[index]; }>)
     }
-    class Radio extends Vue {
+    class Radio extends ElRadio {
         constructor(props: {  [index in keyof ElRadio]?: ElRadio[index]; }&CommonProps<{  [index in keyof ElRadio]?: ElRadio[index]; }>)
     }
-    class RadioButton extends Vue {
+    class RadioButton extends ElRadioButton {
         constructor(props: {  [index in keyof ElRadioButton]?: ElRadioButton[index]; }&CommonProps<{  [index in keyof ElRadioButton]?: ElRadioButton[index]; }>)
     }
-    class RadioGroup extends Vue {
+    class RadioGroup extends ElRadioGroup {
         constructor(props: {  [index in keyof ElRadioGroup]?: ElRadioGroup[index]; }&CommonProps<{  [index in keyof ElRadioGroup]?: ElRadioGroup[index]; }>)
     }
-    class Row extends Vue {
+    class Row extends ElRow {
         constructor(props: {  [index in keyof ElRow]?: ElRow[index]; }&CommonProps<{  [index in keyof ElRow]?: ElRow[index]; }>)
     }
-    class Select extends Vue {
+    class Select extends ElSelect {
         constructor(props: {  [index in keyof ElSelect]?: ElSelect[index]; }&CommonProps<{  [index in keyof ElSelect]?: ElSelect[index]; }>)
     }
-    class Slider extends Vue {
+    class Slider extends ElSlider {
         constructor(props: {  [index in keyof ElSlider]?: ElSlider[index]; }&CommonProps<{  [index in keyof ElSlider]?: ElSlider[index]; }>)
     }
-    class Step extends Vue {
+    class Step extends ElStep {
         constructor(props: {  [index in keyof ElStep]?: ElStep[index]; }&CommonProps<{  [index in keyof ElStep]?: ElStep[index]; }>)
     }
-    class Steps extends Vue {
+    class Steps extends ElSteps {
         constructor(props: {  [index in keyof ElSteps]?: ElSteps[index]; }&CommonProps<{  [index in keyof ElSteps]?: ElSteps[index]; }>)
     }
-    class Submenu extends Vue {
+    class Submenu extends ElSubmenu {
         constructor(props: {  [index in keyof ElSubmenu]?: ElSubmenu[index]; }&CommonProps<{  [index in keyof ElSubmenu]?: ElSubmenu[index]; }>)
     }
-    class Switch extends Vue {
+    class Switch extends ElSwitch {
         constructor(props: {  [index in keyof ElSwitch]?: ElSwitch[index]; }&CommonProps<{  [index in keyof ElSwitch]?: ElSwitch[index]; }>)
     }
-    class Table extends Vue {
+    class Table extends ElTable {
         constructor(props: {  [index in keyof ElTable]?: ElTable[index]; }&CommonProps<{  [index in keyof ElTable]?: ElTable[index]; }>)
     }
-    class TableColumn extends Vue {
+    class TableColumn extends ElTableColumn {
         constructor(props: {  [index in keyof ElTableColumn]?: ElTableColumn[index]; }&CommonProps<{  [index in keyof ElTableColumn]?: ElTableColumn[index]; }>)
     }
-    class Tag extends Vue {
+    class Tag extends ElTag {
         constructor(props: {  [index in keyof ElTag]?: ElTag[index]; }&CommonProps<{  [index in keyof ElTag]?: ElTag[index]; }>)
     }
-    class Tabs extends Vue {
+    class Tabs extends ElTabs {
         constructor(props: {  [index in keyof ElTabs]?: ElTabs[index]; }&CommonProps<{  [index in keyof ElTabs]?: ElTabs[index]; }>)
     }
-    class TabPane extends Vue {
+    class TabPane extends ElTabPane {
         constructor(props: {  [index in keyof ElTabPane]?: ElTabPane[index]; }&CommonProps<{  [index in keyof ElTabPane]?: ElTabPane[index]; }>)
     }
-    class Timeline extends Vue {
+    class Timeline extends ElTimeline {
         constructor(props: {  [index in keyof ElTimeline]?: ElTimeline[index]; }&CommonProps<{  [index in keyof ElTimeline]?: ElTimeline[index]; }>)
     }
-    class TimelineItem extends Vue {
+    class TimelineItem extends ElTimelineItem {
         constructor(props: {  [index in keyof ElTimelineItem]?: ElTimelineItem[index]; }&CommonProps<{  [index in keyof ElTimelineItem]?: ElTimelineItem[index]; }>)
     }
-    class TimePicker extends Vue {
+    class TimePicker extends ElTimePicker {
         constructor(props: {  [index in keyof ElTimePicker]?: ElTimePicker[index]; }&CommonProps<{  [index in keyof ElTimePicker]?: ElTimePicker[index]; }>)
     }
-    class TimeSelect extends Vue {
+    class TimeSelect extends ElTimeSelect {
         constructor(props: {  [index in keyof ElTimeSelect]?: ElTimeSelect[index]; }&CommonProps<{  [index in keyof ElTimeSelect]?: ElTimeSelect[index]; }>)
     }
-    class Tooltip extends Vue {
+    class Tooltip extends ElTooltip {
         constructor(props: {  [index in keyof ElTooltip]?: ElTooltip[index]; }&CommonProps<{  [index in keyof ElTooltip]?: ElTooltip[index]; }>)
     }
-    class Transfer extends Vue {
+    class Transfer extends ElTransfer {
         constructor(props: {  [index in keyof ElTransfer]?: ElTransfer[index]; }&CommonProps<{  [index in keyof ElTransfer]?: ElTransfer[index]; }>)
     }
-    class Tree extends Vue {
+    class Tree extends ElTree<any,any> {
         constructor(props: {  [index in keyof ElTree<any, any>]?: ElTree<any, any>[index]; }&CommonProps<{  [index in keyof ElTree<any, any>]?: ElTree<any, any>[index]; }>)
     }
-    class Upload extends Vue {
+    class Upload extends ElUpload {
         constructor(props: {  [index in keyof ElUpload]?: ElUpload[index]; }&CommonProps<{  [index in keyof ElUpload]?: ElUpload[index]; }>)
     }
-    class Link extends Vue {
+    class Link extends ElLink {
         constructor(props: {  [index in keyof ElLink]?: ElLink[index]; }&CommonProps<{  [index in keyof ElLink]?: ElLink[index]; }>)
     }
-    class Divider extends Vue {
+    class Divider extends ElDivider {
         constructor(props: {  [index in keyof ElDivider]?: ElDivider[index]; }&CommonProps<{  [index in keyof ElDivider]?: ElDivider[index]; }>)
     }
-    class Icon extends Vue {
+    class Icon extends ElIcon {
         constructor(props: {  [index in keyof ElIcon]?: ElIcon[index]; }&CommonProps<{  [index in keyof ElIcon]?: ElIcon[index]; }>)
     }
-    class Calendar extends Vue {
+    class Calendar extends ElCalendar {
         constructor(props: {  [index in keyof ElCalendar]?: ElCalendar[index]; }&CommonProps<{  [index in keyof ElCalendar]?: ElCalendar[index]; }>)
     }
-    class Image extends Vue {
+    class Image extends ElImage {
         constructor(props: {  [index in keyof ElImage]?: ElImage[index]; }&CommonProps<{  [index in keyof ElImage]?: ElImage[index]; }>)
     }
-    class Backtop extends Vue {
+    class Backtop extends ElBacktop {
         constructor(props: {  [index in keyof ElBacktop]?: ElBacktop[index]; }&CommonProps<{  [index in keyof ElBacktop]?: ElBacktop[index]; }>)
     }
-    class InfiniteScroll extends Vue {
-        constructor(props: {  [index in keyof ElInfiniteScroll]?: ElInfiniteScroll[index]; }&CommonProps<{  [index in keyof ElInfiniteScroll]?: ElInfiniteScroll[index]; }>)
-    }
-    class PageHeader extends Vue {
+    // class InfiniteScroll extends ElInfiniteScroll {
+    //     constructor(props: {  [index in keyof ElInfiniteScroll]?: ElInfiniteScroll[index]; }&CommonProps<{  [index in keyof ElInfiniteScroll]?: ElInfiniteScroll[index]; }>)
+    // }
+    class PageHeader extends ElPageHeader {
         constructor(props: {  [index in keyof ElPageHeader]?: ElPageHeader[index]; }&CommonProps<{  [index in keyof ElPageHeader]?: ElPageHeader[index]; }>)
     }
-    class Avatar extends Vue {
+    class Avatar extends ElAvatar {
         constructor(props: {  [index in keyof ElAvatar]?: ElAvatar[index]; }&CommonProps<{  [index in keyof ElAvatar]?: ElAvatar[index]; }>)
     }
-    class Drawer extends Vue {
+    class Drawer extends ElDrawer {
         constructor(props: {  [index in keyof ElDrawer]?: ElDrawer[index]; }&CommonProps<{  [index in keyof ElDrawer]?: ElDrawer[index]; }>)
     }
-    class Popconfirm extends Vue {
+    class Popconfirm extends ElPopconfirm {
         constructor(props: {  [index in keyof ElPopconfirm]?: ElPopconfirm[index]; }&CommonProps<{  [index in keyof ElPopconfirm]?: ElPopconfirm[index]; }>)
     }
 
