@@ -103,6 +103,7 @@ interface CommonProps<T> {
         [props: string]: any
     }
     refInFor?: boolean
+    [key: string]: any
 }
 declare module 'element-ui' {
 
